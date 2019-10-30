@@ -25,10 +25,6 @@ routes:
   us-west-1:
     public:
       vpc_name: demo-saltconf19
-      routes:
-        route1:
-          destination_cidr_block: 0.0.0.0/0
-          internet_gateway_name: igw-demo-saltconf19
       subnet_names:
         - public-b
         - public-c
