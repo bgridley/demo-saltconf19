@@ -34,6 +34,10 @@ routes:
         - public-c
     private:
       vpc_name: demo-saltconf19
+      routes:
+        route1:
+          destination_cidr_block: 0.0.0.0/0
+          nat_gateway_subnet_name: public-b
       subnet_names:
         - private-b
         - private-c
