@@ -1,4 +1,3 @@
 base:
   '*':
-    - ecs
-    - hello-world
+    - sgroups
