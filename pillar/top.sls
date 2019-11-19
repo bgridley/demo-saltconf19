@@ -1,3 +1,4 @@
 base:
   '*':
-    - vpc
+    - ecs
+    - hello-world
