@@ -18,3 +18,21 @@ kcs:
       lb_protocol: HTTP
       team: ops
       scheme: internet-facing
+      autoscaling:
+        min_capacity: 1
+        max_capacity: 4
+        target_value: 40
+        metric_spec: ECSServiceAverageCPUUtilization
+      deployment_configuration:
+        maximumPercent: 200
+        minimumHealthyPercent: 100
+      health_check:
+        health_check_protocol: HTTP
+        health_check_port: traffic-port
+        health_check_path: /health
+        health_check_interval_seconds: 10
+        health_check_timeout_seconds: 5
+        healthy_threshold_count: 3
+        unhealthy_threshold_count: 5
+        http_code: '200'
+      force_new_deployment: True
